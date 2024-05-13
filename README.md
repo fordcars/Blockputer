@@ -1,14 +1,14 @@
 # Blockputer
 8-bit Minecraft computer built using redstone. Also see [assembler](https://github.com/fordcars/BlockputerASM) and [virtual machine](https://github.com/fordcars/BlockputerVM) for easier program development.
 
-**Note:** This project was purely for fun and to learn more about CPU architectures. Even though it is fully functionally, it is so excessively slow that it has no real-world use. However, since it does not use any fancy Minecraft features, and is built solely using redstone, torches and repeaters, it is *relatively* easy to understand and could be a good reference for understanding how a basic 8-bit computer functions.
+**Note:** This project was purely for fun and to learn more about CPU architectures. Even though it is fully functional, it is so excessively slow that it has no real-world use. However, since it does not use any fancy Minecraft features, and is built solely using redstone, torches and repeaters, it is *relatively* easy to understand and could be a good reference for understanding how a basic 8-bit computer functions.
 
 ![Screenshot](https://github.com/fordcars/Blockputer/blob/main/misc/overview.png?raw=true)
 
 ## Features
 * Built only using redstone (no moving parts or command blocks)
 * Harvard architecture with accumulator design
-* 16 instruction ISA, including 8 ALU operations
+* 16-instruction ISA, including 8 ALU operations
 * Conditional jumping
 * 9 general purpose registers
 * 256-byte ROM
@@ -18,11 +18,13 @@
 * Most-importantly, **ultra slow!!!**
 
 ## Getting Started
-The provided Minecraft save file includes a demo program (Fibonacci). Simply load the save and press the `Run/Continue` button on the user interface. It is a good idea to set your render distance and simulation distance to at least 20 chunks to make sure all chunks are simulated correctly. You should also press the `Force chunk loading` button on the interface (next to the map) before running the computer to force load all relevant chunks.
+The provided Minecraft save file includes a demo program (Fibonacci). Simply load the save and press the `Run/Continue` button on the user interface. The program will request a number of iterations to calculate, and will then print each value of the Fibonacci sequence until the specified number of iterations is met. See [fibonacci.txt](https://github.com/fordcars/BlockputerASM/blob/main/test_files/fibonacci.txt) for source (assembly).
+
+It is a good idea to set your render distance and simulation distance to at least 20 chunks to make sure all chunks are simulated correctly. You should also press the `Force chunk loading` button on the interface (next to the map) before running the computer to force load all relevant chunks.
 
 Programs are written using redstone torches on the ROM lines. For simplicity, it's advisable to write your program in assembly, and then convert it into machine code using the [assembler](https://github.com/fordcars/BlockputerASM). Then, you can transcribe the result using torches in Minecraft.
 
-**Note:** This computer is sloooowwwwwww. For example, calculating 3 fibonacci numbers takes a couple minutes using the demo program. I'm sure the computer could be greatly optimized, but I'm honestly never gonna bother :') This project was purely for fun and to learn more about CPU architectures.
+**Note:** This computer is sloooowwwwwww. For example, calculating 3 fibonacci numbers takes a couple minutes using the demo program. I'm sure the computer could be greatly optimized, but I'm honestly never gonna bother :')
 
 ## Instruction Set Architecture
 ### Instruction Format
